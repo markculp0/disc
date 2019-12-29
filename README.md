@@ -1,4 +1,13 @@
-# Disc
+
+***
+
+# Desert Island Discs
+
+***
+
+An Angular application with providing information on my favorite albumns/discs.  
+
+***
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9.
 
