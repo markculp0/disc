@@ -1,0 +1,12 @@
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px">
+
+    <mat-list fxFlex>
+        <mat-list-item *ngFor="let disc of discs">
+            <img matListAvatar src={{disc.image}} alt={{disc.name}}>
+            <h1 matline>{{disc.name}}</h1>
+            <p matline><span>{{disc.description}}</span></p>
+        </mat-list-item>
+    </mat-list>
+</div>

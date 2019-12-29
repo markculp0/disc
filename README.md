@@ -5,7 +5,7 @@
 
 ***
 
-An Angular application with providing information on my favorite albumns/discs.  
+An Angular application providing information on my favorite albumns/discs.  
 
 ***
 
