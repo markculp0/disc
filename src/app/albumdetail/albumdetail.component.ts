@@ -2,16 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { Disc } from '../shared/disc';
 import { DISCS } from '../shared/discs';
 
-
 @Component({
-  selector: 'app-album',
-  templateUrl: './album.component.html',
-  styleUrls: ['./album.component.scss']
+  selector: 'app-albumdetail',
+  templateUrl: './albumdetail.component.html',
+  styleUrls: ['./albumdetail.component.scss']
 })
-export class AlbumComponent implements OnInit {
+export class AlbumdetailComponent implements OnInit {
 
   discs: Disc[] = DISCS;
-  // selectedDisc = DISCS[0];
+  disc = DISCS[0];
+
 
   constructor() { }
 
