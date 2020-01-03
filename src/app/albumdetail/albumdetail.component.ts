@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Disc } from '../shared/disc';
-import { DISCS } from '../shared/discs';
+// import { DISCS } from '../shared/discs';
 
 @Component({
   selector: 'app-albumdetail',
@@ -9,9 +9,11 @@ import { DISCS } from '../shared/discs';
 })
 export class AlbumdetailComponent implements OnInit {
 
-  discs: Disc[] = DISCS;
-  disc = DISCS[0];
+  // discs: Disc[] = DISCS;
+  // disc = DISCS[0];
 
+  @Input()
+  disc: Disc;
 
   constructor() { }
 

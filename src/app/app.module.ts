@@ -19,6 +19,8 @@ import 'hammerjs';
 import { AlbumComponent } from './album/album.component';
 import { AlbumdetailComponent } from './albumdetail/albumdetail.component';
 
+import { DiscService } from './services/disc.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,9 @@ import { AlbumdetailComponent } from './albumdetail/albumdetail.component';
     MatListModule,
     MatToolbarModule
   ],
-  providers: [],
+  providers: [
+    DiscService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

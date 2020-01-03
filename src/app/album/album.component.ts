@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Disc } from '../shared/disc';
-import { DISCS } from '../shared/discs';
 
+import { Disc } from '../shared/disc';
+// import { DISCS } from '../shared/discs';
+import { DiscService } from '../services/disc.service';
 
 @Component({
   selector: 'app-album',
@@ -10,12 +11,19 @@ import { DISCS } from '../shared/discs';
 })
 export class AlbumComponent implements OnInit {
 
-  discs: Disc[] = DISCS;
-  // selectedDisc = DISCS[0];
+  // discs: Disc[] = DISCS;
+  discs: Disc[];
+  selectedDisc: Disc;
 
-  constructor() { }
+  constructor(private discService: DiscService) { }
 
   ngOnInit() {
+    this.discs = this.discService.getDiscs();
+  }
+
+  onSelect(disc: Disc) {
+    this.selectedDisc = disc;
   }
 
 }
+

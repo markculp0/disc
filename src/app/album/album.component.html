@@ -11,7 +11,7 @@
 
      <div fxFlex>
         <mat-grid-list cols="2" rowHeight="250px">
-            <mat-grid-tile *ngFor="let disc of discs">
+            <mat-grid-tile *ngFor="let disc of discs" (click)="onSelect(disc)">
                 <img height="200px" src={{disc.image}} alt={{disc.name}}>
                 <mat-grid-tile-footer>
                     <h1>{{ disc.title | uppercase }}</h1>
@@ -21,7 +21,7 @@
      </div>
 
      <div fxFlex>
-         <app-albumdetail></app-albumdetail>
+         <app-albumdetail [disc]="selectedDisc"></app-albumdetail>
      </div>
 
 </div>
