@@ -20,12 +20,16 @@ import { AlbumComponent } from './album/album.component';
 import { AlbumdetailComponent } from './albumdetail/albumdetail.component';
 
 import { DiscService } from './services/disc.service';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AlbumComponent,
-    AlbumdetailComponent
+    AlbumdetailComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     AppRoutingModule,
