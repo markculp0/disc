@@ -14,4 +14,15 @@ export class DiscService {
     return DISCS;
   }
 
+  getDisc(id: string): Disc {
+    return DISCS.filter((disc) =>
+      (disc.id === id))[0];
+  }
+
+  getFeaturedDisc(): Disc {
+    return DISCS.filter((disc) =>
+      disc.featured)[0];
+  }
 }
+
+
