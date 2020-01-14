@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Disc } from '../shared/disc';
+import { DiscService } from '../services/disc.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  disc: Disc;
+
+  constructor(private discservice: DiscService) { }
 
   ngOnInit() {
+    this.disc = this.discservice.getFeaturedDisc();
   }
 
 }
