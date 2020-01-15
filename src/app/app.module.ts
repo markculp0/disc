@@ -22,9 +22,9 @@ import { AlbumdetailComponent } from './albumdetail/albumdetail.component';
 import { DiscService } from './services/disc.service';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -33,9 +33,9 @@ import { ContactComponent } from './contact/contact.component';
     AlbumdetailComponent,
     HeaderComponent,
     FooterComponent,
-    AboutComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    SearchComponent
   ],
   imports: [
     AppRoutingModule,
