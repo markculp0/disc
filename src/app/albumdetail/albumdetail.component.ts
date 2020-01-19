@@ -1,9 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, ViewChild, Inject, Input } from '@angular/core';
 import { Disc } from '../shared/disc';
 // import { DISCS } from '../shared/discs';
 
 import { DiscService } from '../services/disc.service';
 import { Params, ActivatedRoute } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
 import { Location } from '@angular/common';
 
 @Component({
@@ -19,14 +20,20 @@ export class AlbumdetailComponent implements OnInit {
 
   // @Input()
   disc: Disc;
+  discIds: string[]; 
 
   constructor(private discservice: DiscService,
               private route: ActivatedRoute,
-              private location: Location) { }
+              private location: Location,
+              @Inject('BaseURL') public BaseURL) { }
 
   ngOnInit() {
-    const id = this.route.snapshot.params.id;
-    this.disc = this.discservice.getDisc(id);
+
+    this.discservice.getDiscIds().subscribe(discIds => this.discIds = discIds);
+
+    this.route.params.pipe(switchMap((params: Params) => this.discservice.getDisc(params.id)))
+      .subscribe(disc => this.disc = disc);
+
   }
 
   goBack(): void {

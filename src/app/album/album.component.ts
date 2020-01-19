@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 
 import { Disc } from '../shared/disc';
 // import { DISCS } from '../shared/discs';
@@ -13,17 +13,19 @@ export class AlbumComponent implements OnInit {
 
   // discs: Disc[] = DISCS;
   discs: Disc[];
-  selectedDisc: Disc;
+  // selectedDisc: Disc;
 
-  constructor(private discService: DiscService) { }
+  constructor(private discService: DiscService,
+              @Inject('BaseURL') public BaseURL) { }
 
   ngOnInit() {
-    this.discs = this.discService.getDiscs();
+    this.discService.getDiscs()
+      .subscribe(discs => this.discs = discs);
   }
 
-  onSelect(disc: Disc) {
-    this.selectedDisc = disc;
-  }
+  // onSelect(disc: Disc) {
+  //   this.selectedDisc = disc;
+  // }
 
 }
 

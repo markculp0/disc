@@ -12,14 +12,13 @@
      <div fxFlex>
         <mat-grid-list cols="2" rowHeight="250px">
             <mat-grid-tile *ngFor="let disc of discs" [routerLink]="['/albumdetail', disc.id]">
-                <img height="200px" src={{disc.image}} alt={{disc.name}}>
+                <img height="200px" src="{{BaseURL + disc.image}}" alt={{disc.name}}>
                 <mat-grid-tile-footer>
                     <h1>{{ disc.title | uppercase }}</h1>
                 </mat-grid-tile-footer>
             </mat-grid-tile>
         </mat-grid-list>
      </div>
-
      
     <!-- <app-albumdetail [disc]="selectedDisc"></app-albumdetail> -->
      

@@ -13,7 +13,7 @@
                         <h3>{{disc.title | uppercase}}</h3>
                     </mat-card-title>
                 </mat-card-header>
-                <img mat-card-image src={{disc.image}} alt={{disc.artist}}>
+                <img mat-card-image src="{{BaseURL + disc.image}}" alt={{disc.artist}}>
                 <mat-card-content>
                     <p>{{ disc.description }}</p>
                 </mat-card-content>

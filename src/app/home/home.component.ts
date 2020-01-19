@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { Disc } from '../shared/disc';
 import { DiscService } from '../services/disc.service';
 
@@ -11,10 +11,12 @@ export class HomeComponent implements OnInit {
 
   disc: Disc;
 
-  constructor(private discservice: DiscService) { }
+  constructor(private discservice: DiscService,
+              @Inject('BaseURL') public BaseURL) { }
 
   ngOnInit() {
-    this.disc = this.discservice.getFeaturedDisc();
+    this.discservice.getFeaturedDisc()
+      .subscribe(disc => this.disc = disc);
   }
 
 }
