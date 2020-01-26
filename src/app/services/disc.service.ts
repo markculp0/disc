@@ -25,7 +25,7 @@ export class DiscService {
   }
 
   getFeaturedDisc(): Observable<Disc> {
-    return this.http.get<Disc[]>(baseURL + 'discs?featured=true')
+    return this.http.get<Disc[]>(baseURL + 'disc?featured=true')
       .pipe(map(discs => discs[0]));
   }
 
