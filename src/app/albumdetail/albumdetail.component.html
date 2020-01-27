@@ -6,7 +6,7 @@
         fxLayoutGap="10px"
         fxLayoutGap.xs="0">
 
-        <div fxFlex="30" *ngIf="disc">
+        <div fxFlex="40" *ngIf="disc">
             <mat-card>
                 <mat-card-header>
                     <mat-card-title>
@@ -22,6 +22,17 @@
                     <button mat-button>LIKE</button>
                 </mat-card-actions>
             </mat-card>            
+        </div>
+
+        
+        <div fxFlex="40" *ngIf="disc" >
+            <mat-list>
+                <h3>Songs:</h3>
+                <mat-list-item *ngFor="let song of disc.songs">
+                    <h4 matLine>{{song.title}}</h4>
+                    <p matLine>{{song.writer}}</p>
+                </mat-list-item>
+            </mat-list>         
         </div>
 
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, Inject, Input } from '@angular/core';
 import { Disc } from '../shared/disc';
+import { Song } from '../shared/song';
 // import { DISCS } from '../shared/discs';
 
 import { DiscService } from '../services/disc.service';
@@ -20,7 +21,8 @@ export class AlbumdetailComponent implements OnInit {
 
   // @Input()
   disc: Disc;
-  discIds: string[]; 
+  discIds: string[];
+  song: Song;
 
   constructor(private discservice: DiscService,
               private route: ActivatedRoute,

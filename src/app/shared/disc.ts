@@ -1,3 +1,6 @@
+
+import { Song } from './song';
+
 export class Disc {
     id: string;
     title: string;
@@ -6,4 +9,5 @@ export class Disc {
     image: string;
     featured: boolean;
     description: string;
+    songs: Song[];
 }

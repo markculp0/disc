@@ -1,8 +1,9 @@
-import { Disc } from './disc';
+// import { Disc } from './disc';
 
-export const DISCS: Disc[] = [
+// export const DISCS: Disc[] = 
+[
     {
-      id: '0',
+      id: '1',
       title: 'Surfacing',
       artist: 'Sarah McLauchlan',
       year: '1997',
@@ -11,7 +12,7 @@ export const DISCS: Disc[] = [
       description: 'A defining album, an incredible talent.'
     },
     {
-      id: '1',
+      id: '2',
       title: 'Netherlands',
       artist: 'Dan Fogelberg',
       year: '1977',
@@ -20,7 +21,7 @@ export const DISCS: Disc[] = [
       description: 'One of Dan\'s best.  Introspective and heartfelt.'
     },
     {
-      id: '2',
+      id: '3',
       title: 'X & Y',
       artist: 'Coldplay',
       year: '2005',
@@ -29,7 +30,7 @@ export const DISCS: Disc[] = [
       description: 'Coldplay is hypnotic.  This is one of their most hypnotic albums.'
     },
     {
-      id: '3',
+      id: '4',
       title: 'Eldorado',
       artist: 'Electric Light Orchestra',
       year: '1974',
