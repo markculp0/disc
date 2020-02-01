@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Observable, of } from 'rxjs';
+import { Observable, BehaviorSubject, of } from 'rxjs';
 import { delay, map } from 'rxjs/operators';
 
 import { HttpClient } from '@angular/common/http';
@@ -13,6 +13,13 @@ import { baseURL } from '../shared/baseurl';
   providedIn: 'root'
 })
 export class DiscService {
+
+  // Shared discs
+  private discSource = new BehaviorSubject<Disc>(new Disc());
+  private discsSource = new BehaviorSubject<Disc[]>(new Array <Disc>());
+
+  currentDisc = this.discSource.asObservable();
+  currentDiscs = this.discsSource.asObservable();
 
   constructor(private http: HttpClient) { }
 
@@ -32,6 +39,14 @@ export class DiscService {
   getDiscIds(): Observable<string[] | any> {
     return this.getDiscs()
       .pipe(map(discs => discs.map(disc => disc.id)));
+  }
+
+  changeDisc(disc: Disc) {
+    this.discSource.next(disc);
+  }
+
+  changeDiscs(discs: Disc[]) {
+    this.discsSource.next(discs);
   }
 
 }

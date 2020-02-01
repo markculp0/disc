@@ -24,6 +24,10 @@ export class AlbumdetailComponent implements OnInit {
   discIds: string[];
   song: Song;
 
+  // shared discs
+  curDisc: Disc;
+  curDiscs: Disc[];
+
   constructor(private discservice: DiscService,
               private route: ActivatedRoute,
               private location: Location,
@@ -31,10 +35,13 @@ export class AlbumdetailComponent implements OnInit {
 
   ngOnInit() {
 
-    this.discservice.getDiscIds().subscribe(discIds => this.discIds = discIds);
+    // this.discservice.getDiscIds().subscribe(discIds => this.discIds = discIds);
 
-    this.route.params.pipe(switchMap((params: Params) => this.discservice.getDisc(params.id)))
-      .subscribe(disc => this.disc = disc);
+    // this.route.params.pipe(switchMap((params: Params) => this.discservice.getDisc(params.id)))
+    //   .subscribe(disc => this.disc = disc);
+
+    // Get shared disc
+    this.discservice.currentDisc.subscribe(disc => this.curDisc = disc);
 
   }
 
