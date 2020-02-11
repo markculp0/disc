@@ -6,8 +6,10 @@
     <form novalidate [formGroup]="discsearchForm" #fform="ngForm" (ngSubmit)="onSubmit()" >
         <p>
             <mat-form-field class="tenth-width">
-                <input matInput formControlName="id" placeholder="Album ID" type="number" required>
-                <mat-error *ngIf="discsearchForm.get('id').hasError('required') && discsearchForm.get('id').touched">ID is required</mat-error>
+                <textarea matInput formControlName="id" placeholder="IDs" rows=12></textarea>
+
+                <!-- <input matInput formControlName="id" placeholder="Album ID" type="number" required>
+                <mat-error *ngIf="discsearchForm.get('id').hasError('required') && discsearchForm.get('id').touched">ID is required</mat-error> -->
             </mat-form-field>            
         </p>
         <button type="submit" mat-button class="background-primary text-floral-white"> Submit</button>

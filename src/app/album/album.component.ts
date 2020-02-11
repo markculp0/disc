@@ -24,9 +24,6 @@ export class AlbumComponent implements OnInit {
 
   ngOnInit() {
 
-    // // Get shared discs
-    // this.discService.currentDiscs.subscribe(discs => this.curDiscs = discs);
-
     this.discService.getDiscs()
     .subscribe(discs => this.discs = discs);
 
