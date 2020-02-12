@@ -51,13 +51,35 @@ export class SearchComponent implements OnInit {
   onSubmit() {
     // Get disc ID from form
     this.disc = this.discsearchForm.value;
-    console.log(this.disc.id);
 
-    const formData = JSON.stringify({
-      ids: 1234
-    });
+    const fld = 'ids';
+    let obj = {};
+    obj[fld] = this.disc.id;
+    const formData = JSON.stringify(obj);
 
-    this.http.post<any>(this.BaseURL + 'postData', formData).subscribe(
+    // const formData = JSON.stringify({ ids: `this.disc.id` });
+    console.log(formData);
+
+    // const fd = this.disc.id.split('\n').map(x => ({ids: x}));
+    // const formData = JSON.stringify(fd);
+    // console.log(formData);
+
+    // const formData = JSON.stringify({
+    //   ids: 1234
+    // });
+
+    // const formData = JSON.stringify({
+    //   ids: 1234
+    // });
+
+    // console.log(formData);
+
+    // this.http.post<any>(this.BaseURL + 'postData', formData).subscribe(
+    //   (res) => console.log(res),
+    //   (err) => console.log(err)
+    // );
+
+    this.discService.postData(formData).subscribe(
       (res) => console.log(res),
       (err) => console.log(err)
     );

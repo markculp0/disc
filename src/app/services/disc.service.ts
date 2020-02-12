@@ -45,6 +45,11 @@ export class DiscService {
       .pipe(map(discs => discs.map(disc => disc.id)));
   }
 
+  // Post anything
+  postData(fd: string): Observable<any> {
+    return this.http.post<any>(baseURL + 'postData', fd);
+  }
+
 
 
   changeDisc(disc: Disc) {
