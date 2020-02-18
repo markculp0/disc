@@ -17,6 +17,8 @@ export class SearchComponent implements OnInit {
 
   discsearchForm: FormGroup;
   disc: Disc;
+  discIds: string;
+  nbr = 1;
 
   discs: Disc[];
   selectedDisc: Disc;
@@ -49,54 +51,29 @@ export class SearchComponent implements OnInit {
   }
 
   onSubmit() {
-    // Get disc ID from form
-    this.disc = this.discsearchForm.value;
+    // Get disc IDs from form
+    this.discIds = this.discsearchForm.value.id;
 
     const fld = 'ids';
-    let obj = {};
-    obj[fld] = this.disc.id;
+    const obj = {};
+    obj[fld] = this.discIds.split('\n').map( id => ({id}));
     const formData = JSON.stringify(obj);
 
-    // const formData = JSON.stringify({ ids: `this.disc.id` });
     console.log(formData);
 
-    // const fd = this.disc.id.split('\n').map(x => ({ids: x}));
-    // const formData = JSON.stringify(fd);
-    // console.log(formData);
-
-    // const formData = JSON.stringify({
-    //   ids: 1234
-    // });
-
-    // const formData = JSON.stringify({
-    //   ids: 1234
-    // });
-
-    // console.log(formData);
-
-    // this.http.post<any>(this.BaseURL + 'postData', formData).subscribe(
+    // this.discService.postIdNumbers(formData).subscribe(
     //   (res) => console.log(res),
     //   (err) => console.log(err)
     // );
 
-    this.discService.postData(formData).subscribe(
-      (res) => console.log(res),
-      (err) => console.log(err)
-    );
+    this.discService.postIdNumbers(formData)
+      .subscribe(discs => {this.discs = discs;
+                           this.discService.changeDiscs(discs);
+    });
 
-    // Works!!
-    // // Use ID to select disc
-    // this.selectedDisc = this.discs[this.disc.id]
 
-    // // Alter shared discs
-    // this.discService.changeDisc(this.selectedDisc);
-    // this.discService.changeDiscs(this.discs);
-
-    // // Set local current discs
-    // this.curDisc = this.selectedDisc;
-    // this.curDiscs = this.discs;
-
-    this.router.navigateByUrl('/albumdetail/' + this.disc.id);
+    // this.router.navigateByUrl('/albumdetail/' + this.disc.id);
+    this.router.navigateByUrl('/albumdetail/' + this.nbr);
 
     this.feedbackFormDirective.resetForm();
     this.discsearchForm.reset({

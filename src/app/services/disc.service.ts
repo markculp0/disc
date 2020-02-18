@@ -46,10 +46,9 @@ export class DiscService {
   }
 
   // Post anything
-  postData(fd: string): Observable<any> {
-    return this.http.post<any>(baseURL + 'postData', fd);
+  postIdNumbers(fd: string): Observable<Disc[]> {
+    return this.http.post<Disc[]>(baseURL + 'postData', fd);
   }
-
 
 
   changeDisc(disc: Disc) {
