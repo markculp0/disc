@@ -45,9 +45,9 @@ export class DiscService {
       .pipe(map(discs => discs.map(disc => disc.id)));
   }
 
-  // Post anything
-  postIdNumbers(fd: string): Observable<Disc[]> {
-    return this.http.post<Disc[]>(baseURL + 'postData', fd);
+  // Post disc IDs
+  postIdNumbers(ids: string): Observable<Disc[]> {
+    return this.http.post<Disc[]>(baseURL + 'postID', ids);
   }
 
 

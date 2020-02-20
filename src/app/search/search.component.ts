@@ -18,7 +18,7 @@ export class SearchComponent implements OnInit {
   discsearchForm: FormGroup;
   disc: Disc;
   discIds: string;
-  nbr = 1;
+
 
   discs: Disc[];
   selectedDisc: Disc;
@@ -50,6 +50,7 @@ export class SearchComponent implements OnInit {
     });
   }
 
+
   onSubmit() {
     // Get disc IDs from form
     this.discIds = this.discsearchForm.value.id;
@@ -72,13 +73,12 @@ export class SearchComponent implements OnInit {
     });
 
 
-    // this.router.navigateByUrl('/albumdetail/' + this.disc.id);
-    this.router.navigateByUrl('/albumdetail/' + this.nbr);
+    this.router.navigateByUrl('/albumlist');
 
-    this.feedbackFormDirective.resetForm();
     this.discsearchForm.reset({
       id: 0
     });
+    this.feedbackFormDirective.resetForm();
 
   }
 

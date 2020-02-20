@@ -16,6 +16,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatTableModule } from '@angular/material/table';
+
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -35,6 +37,7 @@ import { ContactComponent } from './contact/contact.component';
 import { SearchComponent } from './search/search.component';
 
 import { baseURL } from './shared/baseurl';
+import { AlbumlistComponent } from './albumlist/albumlist.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,8 @@ import { baseURL } from './shared/baseurl';
     FooterComponent,
     HomeComponent,
     ContactComponent,
-    SearchComponent
+    SearchComponent,
+    AlbumlistComponent
   ],
   imports: [
     AppRoutingModule,
@@ -63,6 +67,7 @@ import { baseURL } from './shared/baseurl';
     MatListModule,
     MatSelectModule,
     MatSlideToggleModule,
+    MatTableModule,
     MatToolbarModule,
     ReactiveFormsModule
   ],

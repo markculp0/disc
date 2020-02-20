@@ -30,9 +30,6 @@ export class AlbumComponent implements OnInit {
 
   }
 
-  // onSelect(disc: Disc) {
-  //   this.selectedDisc = disc;
-  // }
 
   selectDisc(selDisc: Disc) {
 

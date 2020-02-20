@@ -1,0 +1,27 @@
+
+<div class="container" fxLayout="column" fxLayoutGap="10px">
+
+    <div fxFlex>
+        <div>
+            <h3>Discs</h3>
+        </div>
+    </div>
+
+    <!-- Mat-table -->
+    <div fxFlex>
+        <table mat-table [dataSource]="discs"> 
+            
+            <mat-text-column name="id" class="mat-column-id"></mat-text-column>
+            <mat-text-column name="title" class="mat-column-title"></mat-text-column>
+
+            <ng-container matColumnDef="artist">
+                <th mat-header-cell *matHeaderCellDef class="mat-header-artist">Artist</th>
+                <td mat-cell *matCellDef="let disc" class="mat-column-artist">{{ disc.artist }}</td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+            <tr mat-row *matRowDef="let disc; columns: columnsToDisplay" (click)="selectDisc(disc)" [routerLink]="['/albumlist']"></tr>
+        </table>
+    </div>
+
+</div> <!-- end container -->
