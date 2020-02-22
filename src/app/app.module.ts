@@ -6,18 +6,18 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatListModule } from '@angular/material/list';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MatTableModule } from '@angular/material/table';
-
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -38,6 +38,7 @@ import { SearchComponent } from './search/search.component';
 
 import { baseURL } from './shared/baseurl';
 import { AlbumlistComponent } from './albumlist/albumlist.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { AlbumlistComponent } from './albumlist/albumlist.component';
     HomeComponent,
     ContactComponent,
     SearchComponent,
-    AlbumlistComponent
+    AlbumlistComponent,
+    LoginComponent
   ],
   imports: [
     AppRoutingModule,
@@ -61,6 +63,7 @@ import { AlbumlistComponent } from './albumlist/albumlist.component';
     MatButtonModule,
     MatCardModule,
     MatCheckboxModule,
+    MatDialogModule,
     MatFormFieldModule,
     MatGridListModule,
     MatInputModule,
@@ -74,6 +77,9 @@ import { AlbumlistComponent } from './albumlist/albumlist.component';
   providers: [
     DiscService,
     {provide: 'BaseURL', useValue: baseURL}
+  ],
+  entryComponents: [
+    LoginComponent
   ],
   bootstrap: [AppComponent]
 })

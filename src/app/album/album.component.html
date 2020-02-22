@@ -9,6 +9,7 @@
         </div>
      </div>
 
+     
      <div fxFlex>
         <mat-grid-list cols="2" rowHeight="250px">
             <mat-grid-tile *ngFor="let disc of discs" (click)="selectDisc(disc)" [routerLink]="['/albumdetail', disc.id]">

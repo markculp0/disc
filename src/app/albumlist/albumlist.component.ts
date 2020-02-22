@@ -31,6 +31,7 @@ export class AlbumlistComponent implements OnInit {
       .subscribe(discs => this.discs = discs);
   }
 
+
   selectDisc(disc: Disc) {
 
     // User selected disc
@@ -38,9 +39,11 @@ export class AlbumlistComponent implements OnInit {
 
     // Alter shared disc
     this.discService.changeDisc(this.selectedDisc);
+    this.discService.changeDiscs(this.discs);
 
     // Set local current disc
     this.curDisc = this.selectedDisc;
+    this.curDiscs = this.discs;
 
   }
 

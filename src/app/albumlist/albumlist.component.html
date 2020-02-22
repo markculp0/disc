@@ -2,10 +2,10 @@
 <div class="container" fxLayout="column" fxLayoutGap="10px">
 
     <div fxFlex>
+        
         <div>
             <h3>Discs</h3>
         </div>
-    </div>
 
     <!-- Mat-table -->
     <div fxFlex>
@@ -20,7 +20,7 @@
             </ng-container>
 
             <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
-            <tr mat-row *matRowDef="let disc; columns: columnsToDisplay" (click)="selectDisc(disc)" [routerLink]="['/albumlist']"></tr>
+            <tr mat-row *matRowDef="let disc; columns: columnsToDisplay" (click)="selectDisc(disc)" [routerLink]="['/albumdetail', disc.id]"></tr>
         </table>
     </div>
 

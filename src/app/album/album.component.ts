@@ -27,9 +27,7 @@ export class AlbumComponent implements OnInit {
     this.discService.getDiscs()
     .subscribe(discs => this.discs = discs);
 
-
   }
-
 
   selectDisc(selDisc: Disc) {
 
