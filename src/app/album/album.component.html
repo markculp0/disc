@@ -2,6 +2,7 @@
      fxLayout="column"
      fxLayoutGap="10px">
 
+     <!-- Page Header -->
      <div fxFlex>
         <div>
             <h3>Albums</h3>
@@ -9,7 +10,7 @@
         </div>
      </div>
 
-     
+     <!-- Mat Grid List with four albums -->
      <div fxFlex>
         <mat-grid-list cols="2" rowHeight="250px">
             <mat-grid-tile *ngFor="let disc of discs" (click)="selectDisc(disc)" [routerLink]="['/albumdetail', disc.id]">

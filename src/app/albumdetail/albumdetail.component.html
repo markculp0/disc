@@ -6,6 +6,7 @@
         fxLayoutGap="10px"
         fxLayoutGap.xs="0">
 
+        <!-- Materials card for displaying album image -->
         <div fxFlex="40" *ngIf="curDisc">
             <mat-card>
                 <mat-card-header>
@@ -24,7 +25,7 @@
             </mat-card>            
         </div>
 
-        
+        <!-- Materials list detailing songs -->
         <div fxFlex="40" *ngIf="curDisc" >
             <mat-list>
                 <h3>Songs:</h3>
