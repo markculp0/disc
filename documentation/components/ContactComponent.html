@@ -64,6 +64,14 @@
     <code>src/app/contact/contact.component.ts</code>
 </p>
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Component to provide contact information for the
+website.  Provides contact details and map.</p>
+
+    </p>
 
 
     <p class="comment">
@@ -156,10 +164,16 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/contact/contact.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/contact/contact.component.ts:13</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>No constructor. </p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -195,14 +209,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/contact/contact.component.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="19"
+                            class="link-to-prism">src/app/contact/contact.component.ts:19</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>No on init. </p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -220,6 +236,11 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 
+/**
+ * Component to provide contact information for the
+ * website.  Provides contact details and map.
+ *
+ */
 @Component({
   selector: &#x27;app-contact&#x27;,
   templateUrl: &#x27;./contact.component.html&#x27;,
@@ -227,8 +248,10 @@
 })
 export class ContactComponent implements OnInit {
 
+  /** No constructor. */
   constructor() { }
 
+  /** No on init. */
   ngOnInit() {
   }
 
@@ -250,6 +273,7 @@ export class ContactComponent implements OnInit {
       &lt;/div&gt;
     &lt;/div&gt;
   
+    &lt;!-- Contact information and Map --&gt;
     &lt;div fxFlex&gt;
       &lt;h3&gt;Location Information&lt;/h3&gt; 
       &lt;div fxLayout&#x3D;&quot;column&quot; fxLayout.gt-sm&#x3D;&quot;row&quot;&gt;
@@ -310,7 +334,7 @@ export class ContactComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div>  <div class="container"    fxLayout="column"    fxLayoutGap="10px">      <div fxFlex>      <div>          <h3>Contact Us</h3>          <hr>      </div>    </div>      <div fxFlex>      <h3>Location Information</h3>       <div fxLayout="column" fxLayout.gt-sm="row">        <div fxFlex="50" fxFlexOffset="20px">          <h4>Our Address</h4>          <address>            4049 Broadway<br>            Someplace, Minnesota<br>            USA<br>            <i class="fa fa-phone"></i>: +999 123 4567<br>                        <i class="fa fa-envelope"></i>:                   <a href="mailto:admin@mydiscs.com">mailto:admin@mydiscs.com</a>          </address>          <p></p>          <div>            <a mat-raised-button href="tel:+999 123 4567"><i class="fa fa-phone"></i> Call</a>            <a mat-raised-button><i class="fa fa-skype"></i> Skype</a>            <a mat-raised-button href="mailto:admin@mydiscs.com"><i class="fa fa-envelope-o"></i> Email</a>          </div>          </div>        <div fxFlex="40">          <h4>Map of our Location</h4>        </div>      </div>    </div>  </div></div>'
+        var COMPONENT_TEMPLATE = '<div>  <div class="container"    fxLayout="column"    fxLayoutGap="10px">      <div fxFlex>      <div>          <h3>Contact Us</h3>          <hr>      </div>    </div>      <!-- Contact information and Map -->    <div fxFlex>      <h3>Location Information</h3>       <div fxLayout="column" fxLayout.gt-sm="row">        <div fxFlex="50" fxFlexOffset="20px">          <h4>Our Address</h4>          <address>            4049 Broadway<br>            Someplace, Minnesota<br>            USA<br>            <i class="fa fa-phone"></i>: +999 123 4567<br>                        <i class="fa fa-envelope"></i>:                   <a href="mailto:admin@mydiscs.com">mailto:admin@mydiscs.com</a>          </address>          <p></p>          <div>            <a mat-raised-button href="tel:+999 123 4567"><i class="fa fa-phone"></i> Call</a>            <a mat-raised-button><i class="fa fa-skype"></i> Skype</a>            <a mat-raised-button href="mailto:admin@mydiscs.com"><i class="fa fa-envelope-o"></i> Email</a>          </div>          </div>        <div fxFlex="40">          <h4>Map of our Location</h4>        </div>      </div>    </div>  </div></div>'
     var COMPONENTS = [{'name': 'AlbumComponent', 'selector': 'app-album'},{'name': 'AlbumdetailComponent', 'selector': 'app-albumdetail'},{'name': 'AlbumlistComponent', 'selector': 'app-albumlist'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContactComponent', 'selector': 'app-contact'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'SearchComponent', 'selector': 'app-search'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ContactComponent'};

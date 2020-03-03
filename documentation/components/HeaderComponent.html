@@ -64,6 +64,16 @@
     <code>src/app/header/header.component.ts</code>
 </p>
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Component to provide header for each page
+on the website.  Contains Materials Toolbar
+with links to each page and Jumbotron with
+main header and website logo.</p>
+
+    </p>
 
 
     <p class="comment">
@@ -174,12 +184,15 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/header/header.component.ts:11</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/header/header.component.ts:17</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p><strong>Desc:</strong> Constructor for Header Component.</p>
+<hr>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -188,6 +201,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -202,6 +216,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>Mat Dialog for Login Component.</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -243,14 +261,17 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="15"
-                            class="link-to-prism">src/app/header/header.component.ts:15</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/app/header/header.component.ts:32</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p><strong>Desc:</strong> No on init.</p>
+<hr>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -282,14 +303,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="18"
-                            class="link-to-prism">src/app/header/header.component.ts:18</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="38"
+                            class="link-to-prism">src/app/header/header.component.ts:38</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p><strong>Desc:</strong> Method to open Login Component.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -326,10 +349,15 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/header/header.component.ts:13</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/header/header.component.ts:25</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description">Mat Dialog for Login Component.</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -344,6 +372,12 @@ import { MatDialog, MatDialogRef } from &#x27;@angular/material&#x27;;
 
 import { LoginComponent } from &#x27;../login/login.component&#x27;;
 
+/**
+ * Component to provide header for each page
+ * on the website.  Contains Materials Toolbar
+ * with links to each page and Jumbotron with
+ * main header and website logo.
+ */
 @Component({
   selector: &#x27;app-header&#x27;,
   templateUrl: &#x27;./header.component.html&#x27;,
@@ -351,13 +385,30 @@ import { LoginComponent } from &#x27;../login/login.component&#x27;;
 })
 export class HeaderComponent implements OnInit {
 
+  /**
+   * **Desc:** Constructor for Header Component.
+   *
+   * ***
+   * @param dialog Mat Dialog for Login Component.
+   */
   constructor(public dialog: MatDialog) { }
 
+  /**
+   * **Desc:** No on init.
+   *
+   * ***
+   */
   ngOnInit() {
   }
 
+  /**
+   * **Desc:** Method to open Login Component.
+   */
   openLoginForm() {
+
+    /** Open dialog. */
     this.dialog.open(LoginComponent, { width: &#x27;500px&#x27;, height: &#x27;450px&#x27;})
+
   };
 
 }
@@ -365,7 +416,9 @@ export class HeaderComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">  &lt;mat-toolbar class&#x3D;toolbar&gt;
+        <pre class="line-numbers"><code class="language-html">  
+  &lt;!-- Materials Toolbar with links to each page  --&gt;
+  &lt;mat-toolbar class&#x3D;toolbar&gt;
     &lt;span&gt;&lt;img src&#x3D;&quot;/assets/images/logo2.png&quot; height&#x3D;30 width&#x3D;41&gt;&lt;/span&gt;
     &lt;a mat-button routerLink&#x3D;&quot;/home&quot; routerLinkActive&#x3D;&quot;active&quot;&gt;&lt;span class&#x3D;&quot;fa fa-home fa-lg&quot;&gt;&lt;/span&gt; Home&lt;/a&gt;    
     &lt;a mat-button routerLink&#x3D;&quot;/album&quot; routerLinkActive&#x3D;&quot;active&quot;&gt;&lt;span class&#x3D;&quot;fa fa-list fa-lg&quot;&gt;&lt;/span&gt; Discs&lt;/a&gt;
@@ -376,6 +429,7 @@ export class HeaderComponent implements OnInit {
     &lt;a mat-button (click)&#x3D;&quot;openLoginForm()&quot;&gt;&lt;span class&#x3D;&quot;fa fa-sign-in fa-lg&quot;&gt;&lt;/span&gt;  Login&lt;/a&gt;
   &lt;/mat-toolbar&gt;
   
+  &lt;!-- Jumbotron --&gt;
   &lt;div class&#x3D;&quot;container jumbotron&quot;
       fxLayout&#x3D;&quot;row&quot;
       fxLayout.sm&#x3D;&quot;column&quot; 
@@ -385,6 +439,7 @@ export class HeaderComponent implements OnInit {
       fxLayoutAlign.gt-sm&#x3D;&quot;center center&quot; 
       fxLayoutGap&#x3D;&quot;10px&quot;&gt;
   
+    &lt;!-- Main header with website logo --&gt;
     &lt;div fxFlex fxFlex.gt-sm&#x3D;&quot;50%&quot;&gt;
       &lt;h1&gt;My Favorite Discs&lt;/h1&gt;
       &lt;p&gt;Everyone has an opinion, especially when it comes to music.  Your opinions about music are shaped by a lot of personal things that make you uniquely you.  This is the music you need to hear no matter who you are.&lt;/p&gt;
@@ -392,6 +447,7 @@ export class HeaderComponent implements OnInit {
     &lt;div fxFlex fxFlex.gt-sm&#x3D;&quot;20%&quot;&gt;
       &lt;img src&#x3D;&quot;/assets/images/logo2.png&quot; alt&#x3D;&quot;Logo&quot;&gt;
     &lt;/div&gt;
+
     &lt;div fxFlex&gt;&lt;/div&gt;
   &lt;/div&gt;</code></pre>
     </div>
@@ -447,7 +503,7 @@ export class HeaderComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div>  <mat-toolbar class=toolbar>    <span><img src="/assets/images/logo2.png" height=30 width=41></span>    <a mat-button routerLink="/home" routerLinkActive="active"><span class="fa fa-home fa-lg"></span> Home</a>        <a mat-button routerLink="/album" routerLinkActive="active"><span class="fa fa-list fa-lg"></span> Discs</a>    <a mat-button routerLink="/search" routerLinkActive="active"><span class="fa fa-info fa-lg"></span> Search</a>    <a mat-button routerLink="/contactus" routerLinkActive="active"><span class="fa fa-address-card fa-lg"></span> Contact</a>      <span class="flex-spacer"></span>    <a mat-button (click)="openLoginForm()"><span class="fa fa-sign-in fa-lg"></span>  Login</a>  </mat-toolbar>    <div class="container jumbotron"      fxLayout="row"      fxLayout.sm="column"       fxLayout.xs="column"       fxLayoutAlign.xs="start center"      fxLayoutAlign.sm="start center"       fxLayoutAlign.gt-sm="center center"       fxLayoutGap="10px">      <div fxFlex fxFlex.gt-sm="50%">      <h1>My Favorite Discs</h1>      <p>Everyone has an opinion, especially when it comes to music.  Your opinions about music are shaped by a lot of personal things that make you uniquely you.  This is the music you need to hear no matter who you are.</p>    </div>    <div fxFlex fxFlex.gt-sm="20%">      <img src="/assets/images/logo2.png" alt="Logo">    </div>    <div fxFlex></div>  </div></div>'
+        var COMPONENT_TEMPLATE = '<div>    <!-- Materials Toolbar with links to each page  -->  <mat-toolbar class=toolbar>    <span><img src="/assets/images/logo2.png" height=30 width=41></span>    <a mat-button routerLink="/home" routerLinkActive="active"><span class="fa fa-home fa-lg"></span> Home</a>        <a mat-button routerLink="/album" routerLinkActive="active"><span class="fa fa-list fa-lg"></span> Discs</a>    <a mat-button routerLink="/search" routerLinkActive="active"><span class="fa fa-info fa-lg"></span> Search</a>    <a mat-button routerLink="/contactus" routerLinkActive="active"><span class="fa fa-address-card fa-lg"></span> Contact</a>      <span class="flex-spacer"></span>    <a mat-button (click)="openLoginForm()"><span class="fa fa-sign-in fa-lg"></span>  Login</a>  </mat-toolbar>    <!-- Jumbotron -->  <div class="container jumbotron"      fxLayout="row"      fxLayout.sm="column"       fxLayout.xs="column"       fxLayoutAlign.xs="start center"      fxLayoutAlign.sm="start center"       fxLayoutAlign.gt-sm="center center"       fxLayoutGap="10px">      <!-- Main header with website logo -->    <div fxFlex fxFlex.gt-sm="50%">      <h1>My Favorite Discs</h1>      <p>Everyone has an opinion, especially when it comes to music.  Your opinions about music are shaped by a lot of personal things that make you uniquely you.  This is the music you need to hear no matter who you are.</p>    </div>    <div fxFlex fxFlex.gt-sm="20%">      <img src="/assets/images/logo2.png" alt="Logo">    </div>    <div fxFlex></div>  </div></div>'
     var COMPONENTS = [{'name': 'AlbumComponent', 'selector': 'app-album'},{'name': 'AlbumdetailComponent', 'selector': 'app-albumdetail'},{'name': 'AlbumlistComponent', 'selector': 'app-albumlist'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContactComponent', 'selector': 'app-contact'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'SearchComponent', 'selector': 'app-search'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HeaderComponent'};

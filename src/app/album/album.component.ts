@@ -3,7 +3,6 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { Disc } from '../shared/disc';
 import { DiscService } from '../services/disc.service';
 
-
 /**
  * Component displays four album images at a time
  * in a Materials gridlist.  Selecting each image
@@ -15,32 +14,29 @@ import { DiscService } from '../services/disc.service';
   templateUrl: './album.component.html',
   styleUrls: ['./album.component.scss']
 })
-
-/** Display albums in two-column Materials gridlist */
 export class AlbumComponent implements OnInit {
 
-  /** AlbumComponent discs array */
+  /** **Comment:** AlbumComponent discs array */
   discs: Disc[];
-  /** User selected disc */
+  /** **Comment:** User selected disc */
   selectedDisc: Disc;
 
-  /** Current shared disc */
-  curDisc: Disc;
-  /** Current shared discs array */
-  curDiscs: Disc[];
-
   /**
-   * Inject DiscService and BaseURL
+   * **Description:** Inject DiscService and BaseURL
    * - discService - To retrieve disc info from server
    * - BaseUrl - BaseURL string
+   *
+   * ***
    */
   constructor(private discService: DiscService,
               @Inject('BaseURL') public BaseURL) { }
 
   /**
-   * Calls getDiscs() method from dishService
-   * to set the discs array; receives Observable
+   * **Description:** Calls getDiscs() method from
+   * dishService to set the discs array; receives Observable
    * from http GET method
+   *
+   * ***
    */
   ngOnInit() {
 
@@ -50,8 +46,10 @@ export class AlbumComponent implements OnInit {
   }
 
   /**
-   *  Set the selected disc as the current local
-   *  disc and current shared discs
+   *  **Description:** Set the currently selected local disc,
+   *  shared disc, and shared discs array.
+   *
+   * ***
    */
   selectDisc(selDisc: Disc) {
 
@@ -60,13 +58,10 @@ export class AlbumComponent implements OnInit {
 
     /** Alter shared selected disc */
     this.discService.changeDisc(this.selectedDisc);
+
     /** Alter shared discs array */
     this.discService.changeDiscs(this.discs);
 
-    /** Set local current selected disc */
-    this.curDisc = this.selectedDisc;
-    /** Set local current discs array */
-    this.curDiscs = this.discs;
   }
 
 }

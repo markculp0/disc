@@ -7,16 +7,16 @@
         fxLayoutGap.xs="0">
 
         <!-- Materials card for displaying album image -->
-        <div fxFlex="40" *ngIf="curDisc">
+        <div fxFlex="40" *ngIf="disc">
             <mat-card>
                 <mat-card-header>
                     <mat-card-title>
-                        <h3>{{curDisc.title | uppercase}}</h3>
+                        <h3>{{disc.title | uppercase}}</h3>
                     </mat-card-title>
                 </mat-card-header>
-                <img mat-card-image src="{{BaseURL + curDisc.image}}" alt={{curDisc.artist}}>
+                <img mat-card-image src="{{BaseURL + disc.image}}" alt={{disc.artist}}>
                 <mat-card-content>
-                    <p>{{ curDisc.description }}</p>
+                    <p>{{ disc.description }}</p>
                 </mat-card-content>
                 <mat-card-actions>
                     <button mat-button (click)="goBack()">BACK</button>
@@ -26,10 +26,10 @@
         </div>
 
         <!-- Materials list detailing songs -->
-        <div fxFlex="40" *ngIf="curDisc" >
+        <div fxFlex="40" *ngIf="disc" >
             <mat-list>
                 <h3>Songs:</h3>
-                <mat-list-item *ngFor="let song of curDisc.songs">
+                <mat-list-item *ngFor="let song of disc.songs">
                     <h4 matLine>{{song.title}}</h4>
                     <p matLine>{{song.writer}}</p>
                 </mat-list-item>

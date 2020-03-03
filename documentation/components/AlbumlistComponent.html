@@ -145,12 +145,6 @@ albums returned from a user search.</p>
                                 <a href="#columnsToDisplay">columnsToDisplay</a>
                             </li>
                             <li>
-                                <a href="#curDisc">curDisc</a>
-                            </li>
-                            <li>
-                                <a href="#curDiscs">curDiscs</a>
-                            </li>
-                            <li>
                                 <a href="#disc">disc</a>
                             </li>
                             <li>
@@ -200,13 +194,13 @@ albums returned from a user search.</p>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/albumlist/albumlist.component.ts:32</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/albumlist/albumlist.component.ts:35</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p><strong>Description:</strong> Injects discService and BaseURL.</p>
+                            <div class="io-description"><p><strong>Description:</strong> Inject discService and BaseURL.</p>
 <hr>
 </div>
                             <div>
@@ -283,8 +277,8 @@ albums returned from a user search.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="50"
-                            class="link-to-prism">src/app/albumlist/albumlist.component.ts:50</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">src/app/albumlist/albumlist.component.ts:52</a></div>
                 </td>
             </tr>
 
@@ -293,8 +287,7 @@ albums returned from a user search.</p>
                 <td class="col-md-4">
                     <div class="io-description"><p><strong>Description:</strong> Retrieves current discs from
 discserviceusing the &#39;currentDiscs&#39; property from
-the discservice.  Sets discs:
-discs.</p>
+the discservice.  Sets local discs array.</p>
 <hr>
 </div>
 
@@ -328,15 +321,15 @@ discs.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="61"
-                            class="link-to-prism">src/app/albumlist/albumlist.component.ts:61</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">src/app/albumlist/albumlist.component.ts:63</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p><strong>Description:</strong> Method to set the discs displayed.</p>
+                    <div class="io-description"><p><strong>Description:</strong> Set the user-selected discs.</p>
 <hr>
 </div>
 
@@ -414,7 +407,7 @@ discs.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/albumlist/albumlist.component.ts:40</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/albumlist/albumlist.component.ts:43</a></div>
                             </td>
                         </tr>
 
@@ -448,64 +441,16 @@ discs.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/albumlist/albumlist.component.ts:30</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/albumlist/albumlist.component.ts:33</a></div>
                             </td>
                         </tr>
 
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="curDisc"></a>
-                        <span class="name">
-                            <b>
-                            curDisc</b>
-                            <a href="#curDisc"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <div class="io-description"><p><strong>Desc:</strong> Array of columns to display in Mat table. </p>
+</div>
                     </td>
                 </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="../classes/Disc.html" target="_self" >Disc</a></code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/albumlist/albumlist.component.ts:27</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="curDiscs"></a>
-                        <span class="name">
-                            <b>
-                            curDiscs</b>
-                            <a href="#curDiscs"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="../classes/Disc.html" target="_self" >Disc[]</a></code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/albumlist/albumlist.component.ts:28</a></div>
-                            </td>
-                        </tr>
-
 
             </tbody>
         </table>
@@ -529,10 +474,16 @@ discs.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/albumlist/albumlist.component.ts:23</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/albumlist/albumlist.component.ts:24</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p><strong>Desc:</strong> Local disc. </p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -556,10 +507,16 @@ discs.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/albumlist/albumlist.component.ts:24</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/albumlist/albumlist.component.ts:27</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p><strong>Desc:</strong> Local disc array. </p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -583,10 +540,16 @@ discs.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/albumlist/albumlist.component.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/albumlist/albumlist.component.ts:30</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p><strong>Desc:</strong> Local selected disc </p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -618,19 +581,22 @@ import { DiscService } from &#x27;../services/disc.service&#x27;;
  */
 export class AlbumlistComponent implements OnInit {
 
+  /** **Desc:** Local disc. */
   disc: Disc;
+
+  /** **Desc:** Local disc array. */
   discs: Disc[];
+
+  /** **Desc:** Local selected disc */
   selectedDisc: Disc;
 
-  curDisc: Disc;
-  curDiscs: Disc[];
-
+  /** **Desc:** Array of columns to display in Mat table. */
   columnsToDisplay &#x3D; [
     &#x27;id&#x27;, &#x27;title&#x27;, &#x27;artist&#x27;
   ];
 
   /**
-   * **Description:** Injects discService and BaseURL.
+   * **Description:** Inject discService and BaseURL.
    *
    * ***
    */
@@ -640,8 +606,7 @@ export class AlbumlistComponent implements OnInit {
   /**
    * **Description:** Retrieves current discs from
    * discserviceusing the &#x27;currentDiscs&#x27; property from
-   * the discservice.  Sets discs:
-   * discs.
+   * the discservice.  Sets local discs array.
    *
    * ***
    */
@@ -652,22 +617,20 @@ export class AlbumlistComponent implements OnInit {
   }
 
   /**
-   * **Description:** Method to set the discs displayed.
+   * **Description:** Set the user-selected discs.
    * ***
    * @param disc Discs returned by user&#x27;s search.
    */
   selectDisc(disc: Disc) {
 
-    // User selected disc
+    /** **Desc:** Set user selected disc */
     this.selectedDisc &#x3D; disc;
 
-    // Alter shared disc
+    /** **Desc:** Update shared disc */
     this.discService.changeDisc(this.selectedDisc);
-    this.discService.changeDiscs(this.discs);
 
-    // Set local current disc
-    this.curDisc &#x3D; this.selectedDisc;
-    this.curDiscs &#x3D; this.discs;
+    /** **Desc:** Update shared discs array */
+    this.discService.changeDiscs(this.discs);
 
   }
 

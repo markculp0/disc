@@ -1,3 +1,4 @@
 ## Change Log
 
-- Add documentation to Album and Albumdetail Components, 3/01/2020
+* 3/02/2020, Remove curDir properties, docs 45%.
+* 3/01/2020, Add documentation to Album and Albumdetail Components.

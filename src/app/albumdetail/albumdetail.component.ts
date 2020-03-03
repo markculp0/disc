@@ -7,7 +7,6 @@ import { Params, ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 import { Location } from '@angular/common';
 
-
 /**
  * Component displays individual album details.  An
  * image of the album is displayed in a Materials card.
@@ -18,11 +17,6 @@ import { Location } from '@angular/common';
   templateUrl: './albumdetail.component.html',
   styleUrls: ['./albumdetail.component.scss']
 })
-
-/**
- * Display album image in Materials card and
- * album details in Materials list.
- */
 export class AlbumdetailComponent implements OnInit {
 
   /** AlbumdetailComponent local disc */
@@ -32,17 +26,14 @@ export class AlbumdetailComponent implements OnInit {
   /** AlbumdetailComponent song */
   song: Song;
 
-  /** Current shared disc */
-  curDisc: Disc;
-  /** Current shared discs array */
-  curDiscs: Disc[];
-
   /**
-   * Inject DiscService, ActivatedRoute, Location and BaseURL
+   * **Desc:** Inject DiscService, ActivatedRoute, Location and BaseURL
    * - discService - To retrieve current selected disc.
    * - route - Not used.
    * - location - For page back traversal.
    * - BaseUrl - BaseURL string.
+   *
+   * ***
    */
   constructor(private discservice: DiscService,
               private route: ActivatedRoute,
@@ -50,10 +41,11 @@ export class AlbumdetailComponent implements OnInit {
               @Inject('BaseURL') public BaseURL) { }
 
   /**
-   * Retrieves current disc from discservice
+   * **Desc:** Retrieves current disc from discservice
    * using the 'currentDisc' property from
-   * the discservice.  Sets current shared disc:
-   * curDisc.
+   * the discservice.  Sets current local disc.
+   *
+   * ***
    */
   ngOnInit() {
 
@@ -63,11 +55,11 @@ export class AlbumdetailComponent implements OnInit {
     //   .subscribe(disc => this.disc = disc);
 
     /** Set curDisc using discservice currentDisc property */
-    this.discservice.currentDisc.subscribe(disc => this.curDisc = disc);
+    this.discservice.currentDisc.subscribe(disc => this.disc = disc);
 
   }
 
-  /** Page back in history */
+  /** **Desc:** Enable page back in history */
   goBack(): void {
     this.location.back();
   }

@@ -20,19 +20,22 @@ import { DiscService } from '../services/disc.service';
  */
 export class AlbumlistComponent implements OnInit {
 
+  /** **Desc:** Local disc. */
   disc: Disc;
+
+  /** **Desc:** Local disc array. */
   discs: Disc[];
+
+  /** **Desc:** Local selected disc */
   selectedDisc: Disc;
 
-  curDisc: Disc;
-  curDiscs: Disc[];
-
+  /** **Desc:** Array of columns to display in Mat table. */
   columnsToDisplay = [
     'id', 'title', 'artist'
   ];
 
   /**
-   * **Description:** Injects discService and BaseURL.
+   * **Description:** Inject discService and BaseURL.
    *
    * ***
    */
@@ -42,8 +45,7 @@ export class AlbumlistComponent implements OnInit {
   /**
    * **Description:** Retrieves current discs from
    * discserviceusing the 'currentDiscs' property from
-   * the discservice.  Sets discs:
-   * discs.
+   * the discservice.  Sets local discs array.
    *
    * ***
    */
@@ -54,22 +56,20 @@ export class AlbumlistComponent implements OnInit {
   }
 
   /**
-   * **Description:** Method to set the discs to be displayed.
+   * **Description:** Set the user-selected discs.
    * ***
    * @param disc Discs returned by user's search.
    */
   selectDisc(disc: Disc) {
 
-    // User selected disc
+    /** **Desc:** Set user selected disc */
     this.selectedDisc = disc;
 
-    // Alter shared disc
+    /** **Desc:** Update shared disc */
     this.discService.changeDisc(this.selectedDisc);
-    this.discService.changeDiscs(this.discs);
 
-    // Set local current disc
-    this.curDisc = this.selectedDisc;
-    this.curDiscs = this.discs;
+    /** **Desc:** Update shared discs array */
+    this.discService.changeDiscs(this.discs);
 
   }
 

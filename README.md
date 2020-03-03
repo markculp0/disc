@@ -1,9 +1,9 @@
 
-***
+---
 
 # Desert Island Discs
 
-***
+---
 
 * An Angular application providing information on my favorite albums/discs.  
 * Provides a brief review/description of each album.
