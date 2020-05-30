@@ -50,6 +50,11 @@ export class DiscService {
     return this.http.post<Disc[]>(baseURL + 'postID', ids);
   }
 
+  // Post IDs and download images
+  postDownloadImages(ids: string): Observable<any> {
+    return this.http.post(baseURL + 'images', ids);
+  }
+
 
   changeDisc(disc: Disc) {
     this.discSource.next(disc);

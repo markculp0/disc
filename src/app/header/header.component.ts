@@ -1,5 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material';
+
+import { Router } from '@angular/router';
+import { saveAs } from 'file-saver';
+
+
+import { DiscService } from '../services/disc.service';
 
 import { LoginComponent } from '../login/login.component';
 
@@ -22,7 +28,11 @@ export class HeaderComponent implements OnInit {
    * ***
    * @param dialog Mat Dialog for Login Component.
    */
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog,
+              private router: Router,
+              private discService: DiscService,
+              @Inject('BaseURL') public BaseURL
+    ) { }
 
   /**
    * **Desc:** No on init.
@@ -40,6 +50,21 @@ export class HeaderComponent implements OnInit {
     /** Open dialog. */
     this.dialog.open(LoginComponent, { width: '500px', height: '450px'})
 
-  };
+  }
+
+  /**
+   * **Desc:** Method to determine if user is on a particular page or route.
+   */
+  hasRoute(route: string) {
+
+    /** On specific page or route? */
+    return this.router.url.includes(route);
+  }
+
+  download() {
+    this.discService.postDownloadImages(filename).subscribe(
+      data => { saveAs(data, filename);
+      });
+  }
 
 }

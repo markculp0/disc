@@ -8,7 +8,10 @@
     <a mat-button routerLink="/contactus" routerLinkActive="active"><span class="fa fa-address-card fa-lg"></span> Contact</a>
   
     <span class="flex-spacer"></span>
-    <a mat-button (click)="openLoginForm()"><span class="fa fa-sign-in fa-lg"></span>  Login</a>
+    <span mat-button *ngIf="hasRoute('/album')" class="fa fa-download fa-lg"> Download:</span> 
+    <a mat-button *ngIf="hasRoute('/album')"><span class="fa fa-file-excel-o fa-lg"></span> Spreadsheet</a>
+    <a mat-button *ngIf="hasRoute('/album')"><span class="fa fa-file-image-o fa-lg"></span> Images</a>
+    <a mat-button (click)="openLoginForm()"><span class="fa fa-sign-in fa-lg"></span> Login</a>
   </mat-toolbar>
   
   <!-- Jumbotron -->
