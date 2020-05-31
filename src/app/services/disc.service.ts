@@ -5,6 +5,8 @@ import { delay, map } from 'rxjs/operators';
 
 import { HttpClient } from '@angular/common/http';
 
+
+
 import { Disc } from '../shared/disc';
 // import { DISCS } from '../shared/discs';
 import { baseURL } from '../shared/baseurl';
@@ -13,6 +15,7 @@ import { baseURL } from '../shared/baseurl';
   providedIn: 'root'
 })
 export class DiscService {
+
 
   // Shared discs
   private discSource = new BehaviorSubject<Disc>(new Disc());
@@ -50,9 +53,16 @@ export class DiscService {
     return this.http.post<Disc[]>(baseURL + 'postID', ids);
   }
 
-  // Post IDs and download images
-  postDownloadImages(ids: string): Observable<any> {
-    return this.http.post(baseURL + 'images', ids);
+  // Get Image and download images
+  // getDownloadZip(): Observable<Blob> {
+  //   let url = `${baseURL}${'/image.zip'}`;
+  //   var body = { filename: 'image.zip' };
+
+  // }
+
+  export() {
+    return this.http.get(baseURL + 'image.zip',
+        {responseType: 'blob'});
   }
 
 

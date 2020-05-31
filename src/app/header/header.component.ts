@@ -48,7 +48,7 @@ export class HeaderComponent implements OnInit {
   openLoginForm() {
 
     /** Open dialog. */
-    this.dialog.open(LoginComponent, { width: '500px', height: '450px'})
+    this.dialog.open(LoginComponent, { width: '500px', height: '450px'});
 
   }
 
@@ -61,10 +61,9 @@ export class HeaderComponent implements OnInit {
     return this.router.url.includes(route);
   }
 
-  download() {
-    this.discService.postDownloadImages(filename).subscribe(
-      data => { saveAs(data, filename);
-      });
+  downloadZip() {
+    this.discService.export().subscribe(data => saveAs(data, `image.zip`));
   }
+
 
 }
