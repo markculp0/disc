@@ -4,7 +4,7 @@ import { MatDialog, MatDialogRef } from '@angular/material';
 import { Router } from '@angular/router';
 import { saveAs } from 'file-saver';
 
-
+import { Disc } from '../shared/disc';
 import { DiscService } from '../services/disc.service';
 
 import { LoginComponent } from '../login/login.component';
@@ -21,6 +21,9 @@ import { LoginComponent } from '../login/login.component';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+  curDiscs: Disc[];
+  curIds: string[];
 
   /**
    * **Desc:** Constructor for Header Component.
@@ -42,6 +45,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+
   /**
    * **Desc:** Method to open Login Component.
    */
@@ -56,13 +60,32 @@ export class HeaderComponent implements OnInit {
    * **Desc:** Method to determine if user is on a particular page or route.
    */
   hasRoute(route: string) {
-
     /** On specific page or route? */
     return this.router.url.includes(route);
   }
 
   downloadZip() {
-    this.discService.export().subscribe(data => saveAs(data, `image.zip`));
+
+    this.discService.currentDiscs
+        .subscribe(cds => this.curDiscs = cds);
+
+    // for (let i = 1; i < this.curDiscs.length; i++) {
+    //   this.curIds[i] = this.curDiscs[i].id;
+    // }
+
+    // for (let i = 1; i < this.curIds.length; i++) {
+    //   console.log(this.curIds[i]);
+    // }
+
+    
+    const fld = 'ids';
+    const obj = {};
+    obj[fld] = Object.assign( [], this.curDiscs);
+    const formData = JSON.stringify(obj);
+
+    console.log(formData);
+
+    // this.discService.export().subscribe(data => saveAs(data, `image.zip`));
   }
 
 

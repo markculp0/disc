@@ -26,6 +26,14 @@ export class DiscService {
 
   constructor(private http: HttpClient) { }
 
+  changeDisc(disc: Disc) {
+    this.discSource.next(disc);
+  }
+
+  changeDiscs(discs: Disc[]) {
+    this.discsSource.next(discs);
+  }
+
   // Get Discs array over HTTP
   getDiscs(): Observable<Disc[]> {
     return this.http.get<Disc[]>(baseURL + 'discs');
@@ -53,26 +61,13 @@ export class DiscService {
     return this.http.post<Disc[]>(baseURL + 'postID', ids);
   }
 
-  // Get Image and download images
-  // getDownloadZip(): Observable<Blob> {
-  //   let url = `${baseURL}${'/image.zip'}`;
-  //   var body = { filename: 'image.zip' };
-
-  // }
-
   export() {
     return this.http.get(baseURL + 'image.zip',
         {responseType: 'blob'});
   }
 
 
-  changeDisc(disc: Disc) {
-    this.discSource.next(disc);
-  }
 
-  changeDiscs(discs: Disc[]) {
-    this.discsSource.next(discs);
-  }
 
 }
 
