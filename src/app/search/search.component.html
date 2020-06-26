@@ -2,6 +2,7 @@
 <div fxFlex fxFlexOffset="20px" class="form-size">
     <h3>Search for an Album</h3>
     <p>{{discsearchForm.value | json}} {{discsearchForm.status}}</p>
+    <p *ngIf="!discsearchForm.valid && discsearchForm.dirty">Invalid input.</p>
 
     <form novalidate [formGroup]="discsearchForm" #fform="ngForm" (ngSubmit)="onSubmit()" >
         <p>
