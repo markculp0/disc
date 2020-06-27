@@ -141,6 +141,16 @@ main header and website logo.</p>
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
+                                <a href="#BaseURL">BaseURL</a>
+                            </li>
+                            <li>
+                                <a href="#curDiscs">curDiscs</a>
+                            </li>
+                            <li>
+                                <a href="#curIds">curIds</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#dialog">dialog</a>
                             </li>
                         </ul>
@@ -155,6 +165,12 @@ main header and website logo.</p>
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
+                            <li>
+                                <a href="#downloadZip">downloadZip</a>
+                            </li>
+                            <li>
+                                <a href="#hasRoute">hasRoute</a>
+                            </li>
                             <li>
                                 <a href="#ngOnInit">ngOnInit</a>
                             </li>
@@ -179,12 +195,12 @@ main header and website logo.</p>
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(dialog: MatDialog)</code>
+<code>constructor(dialog: MatDialog, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, discService: <a href="../injectables/DiscService.html">DiscService</a>, BaseURL)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/header/header.component.ts:17</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/header/header.component.ts:26</a></div>
                             </td>
                         </tr>
 
@@ -221,6 +237,47 @@ main header and website logo.</p>
 </code>
                                                         </td>
                                                 </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>discService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DiscService.html" target="_self" >DiscService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>BaseURL</td>
+                                                  
+                                                        <td>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                        </td>
+                                                </tr>
                                         </tbody>
                                     </table>
                             </div>
@@ -243,6 +300,117 @@ main header and website logo.</p>
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="downloadZip"></a>
+                    <span class="name">
+                        <b>
+                            downloadZip
+                        </b>
+                        <a href="#downloadZip"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>downloadZip()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="67"
+                            class="link-to-prism">src/app/header/header.component.ts:67</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hasRoute"></a>
+                    <span class="name">
+                        <b>
+                            hasRoute
+                        </b>
+                        <a href="#hasRoute"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>hasRoute(route: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="62"
+                            class="link-to-prism">src/app/header/header.component.ts:62</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p><strong>Desc:</strong> Method to determine if user is on a particular page or route.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>route</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="ngOnInit"></a>
                     <span class="name">
                         <b>
@@ -261,8 +429,8 @@ main header and website logo.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="32"
-                            class="link-to-prism">src/app/header/header.component.ts:32</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="45"
+                            class="link-to-prism">src/app/header/header.component.ts:45</a></div>
                 </td>
             </tr>
 
@@ -303,8 +471,8 @@ main header and website logo.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="38"
-                            class="link-to-prism">src/app/header/header.component.ts:38</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">src/app/header/header.component.ts:52</a></div>
                 </td>
             </tr>
 
@@ -332,6 +500,91 @@ main header and website logo.</p>
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="BaseURL"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            BaseURL</b>
+                            <a href="#BaseURL"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @Inject(&#x27;BaseURL&#x27;)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/header/header.component.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="curDiscs"></a>
+                        <span class="name">
+                            <b>
+                            curDiscs</b>
+                            <a href="#curDiscs"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Disc.html" target="_self" >Disc[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/header/header.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="curIds"></a>
+                        <span class="name">
+                            <b>
+                            curIds</b>
+                            <a href="#curIds"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>string[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/header/header.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="dialog"></a>
                         <span class="name">
                             <b>
@@ -349,7 +602,7 @@ main header and website logo.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/header/header.component.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/header/header.component.ts:34</a></div>
                             </td>
                         </tr>
 
@@ -367,8 +620,14 @@ main header and website logo.</p>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Inject } from &#x27;@angular/core&#x27;;
 import { MatDialog, MatDialogRef } from &#x27;@angular/material&#x27;;
+
+import { Router } from &#x27;@angular/router&#x27;;
+import { saveAs } from &#x27;file-saver&#x27;;
+
+import { Disc } from &#x27;../shared/disc&#x27;;
+import { DiscService } from &#x27;../services/disc.service&#x27;;
 
 import { LoginComponent } from &#x27;../login/login.component&#x27;;
 
@@ -385,13 +644,20 @@ import { LoginComponent } from &#x27;../login/login.component&#x27;;
 })
 export class HeaderComponent implements OnInit {
 
+  curDiscs: Disc[];
+  curIds: string[];
+
   /**
    * **Desc:** Constructor for Header Component.
    *
    * ***
    * @param dialog Mat Dialog for Login Component.
    */
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog,
+              private router: Router,
+              private discService: DiscService,
+              @Inject(&#x27;BaseURL&#x27;) public BaseURL
+    ) { }
 
   /**
    * **Desc:** No on init.
@@ -401,15 +667,49 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+
   /**
    * **Desc:** Method to open Login Component.
    */
   openLoginForm() {
 
     /** Open dialog. */
-    this.dialog.open(LoginComponent, { width: &#x27;500px&#x27;, height: &#x27;450px&#x27;})
+    this.dialog.open(LoginComponent, { width: &#x27;500px&#x27;, height: &#x27;450px&#x27;});
 
-  };
+  }
+
+  /**
+   * **Desc:** Method to determine if user is on a particular page or route.
+   */
+  hasRoute(route: string) {
+    /** On specific page or route? */
+    return this.router.url.includes(route);
+  }
+
+  downloadZip() {
+
+    this.discService.currentDiscs
+        .subscribe(cds &#x3D;&gt; this.curDiscs &#x3D; cds);
+
+    // for (let i &#x3D; 1; i &lt; this.curDiscs.length; i++) {
+    //   this.curIds[i] &#x3D; this.curDiscs[i].id;
+    // }
+
+    // for (let i &#x3D; 1; i &lt; this.curIds.length; i++) {
+    //   console.log(this.curIds[i]);
+    // }
+
+    
+    const fld &#x3D; &#x27;ids&#x27;;
+    const obj &#x3D; {};
+    obj[fld] &#x3D; Object.assign( [], this.curDiscs);
+    const formData &#x3D; JSON.stringify(obj);
+
+    console.log(formData);
+
+    // this.discService.export().subscribe(data &#x3D;&gt; saveAs(data, &#x60;image.zip&#x60;));
+  }
+
 
 }
 </code></pre>
@@ -426,7 +726,10 @@ export class HeaderComponent implements OnInit {
     &lt;a mat-button routerLink&#x3D;&quot;/contactus&quot; routerLinkActive&#x3D;&quot;active&quot;&gt;&lt;span class&#x3D;&quot;fa fa-address-card fa-lg&quot;&gt;&lt;/span&gt; Contact&lt;/a&gt;
   
     &lt;span class&#x3D;&quot;flex-spacer&quot;&gt;&lt;/span&gt;
-    &lt;a mat-button (click)&#x3D;&quot;openLoginForm()&quot;&gt;&lt;span class&#x3D;&quot;fa fa-sign-in fa-lg&quot;&gt;&lt;/span&gt;  Login&lt;/a&gt;
+    &lt;span mat-button *ngIf&#x3D;&quot;hasRoute(&#x27;/album&#x27;)&quot; class&#x3D;&quot;fa fa-download fa-lg&quot;&gt; Download:&lt;/span&gt; 
+    &lt;a mat-button *ngIf&#x3D;&quot;hasRoute(&#x27;/album&#x27;)&quot;&gt;&lt;span class&#x3D;&quot;fa fa-file-excel-o fa-lg&quot;&gt;&lt;/span&gt; Spreadsheet&lt;/a&gt;
+    &lt;a mat-button (click)&#x3D;&quot;downloadZip()&quot; *ngIf&#x3D;&quot;hasRoute(&#x27;/album&#x27;)&quot;&gt;&lt;span class&#x3D;&quot;fa fa-file-image-o fa-lg&quot;&gt;&lt;/span&gt; Images&lt;/a&gt;
+    &lt;a mat-button (click)&#x3D;&quot;openLoginForm()&quot;&gt;&lt;span class&#x3D;&quot;fa fa-sign-in fa-lg&quot;&gt;&lt;/span&gt; Login&lt;/a&gt;
   &lt;/mat-toolbar&gt;
   
   &lt;!-- Jumbotron --&gt;
@@ -503,7 +806,7 @@ export class HeaderComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div>    <!-- Materials Toolbar with links to each page  -->  <mat-toolbar class=toolbar>    <span><img src="/assets/images/logo2.png" height=30 width=41></span>    <a mat-button routerLink="/home" routerLinkActive="active"><span class="fa fa-home fa-lg"></span> Home</a>        <a mat-button routerLink="/album" routerLinkActive="active"><span class="fa fa-list fa-lg"></span> Discs</a>    <a mat-button routerLink="/search" routerLinkActive="active"><span class="fa fa-info fa-lg"></span> Search</a>    <a mat-button routerLink="/contactus" routerLinkActive="active"><span class="fa fa-address-card fa-lg"></span> Contact</a>      <span class="flex-spacer"></span>    <a mat-button (click)="openLoginForm()"><span class="fa fa-sign-in fa-lg"></span>  Login</a>  </mat-toolbar>    <!-- Jumbotron -->  <div class="container jumbotron"      fxLayout="row"      fxLayout.sm="column"       fxLayout.xs="column"       fxLayoutAlign.xs="start center"      fxLayoutAlign.sm="start center"       fxLayoutAlign.gt-sm="center center"       fxLayoutGap="10px">      <!-- Main header with website logo -->    <div fxFlex fxFlex.gt-sm="50%">      <h1>My Favorite Discs</h1>      <p>Everyone has an opinion, especially when it comes to music.  Your opinions about music are shaped by a lot of personal things that make you uniquely you.  This is the music you need to hear no matter who you are.</p>    </div>    <div fxFlex fxFlex.gt-sm="20%">      <img src="/assets/images/logo2.png" alt="Logo">    </div>    <div fxFlex></div>  </div></div>'
+        var COMPONENT_TEMPLATE = '<div>    <!-- Materials Toolbar with links to each page  -->  <mat-toolbar class=toolbar>    <span><img src="/assets/images/logo2.png" height=30 width=41></span>    <a mat-button routerLink="/home" routerLinkActive="active"><span class="fa fa-home fa-lg"></span> Home</a>        <a mat-button routerLink="/album" routerLinkActive="active"><span class="fa fa-list fa-lg"></span> Discs</a>    <a mat-button routerLink="/search" routerLinkActive="active"><span class="fa fa-info fa-lg"></span> Search</a>    <a mat-button routerLink="/contactus" routerLinkActive="active"><span class="fa fa-address-card fa-lg"></span> Contact</a>      <span class="flex-spacer"></span>    <span mat-button *ngIf="hasRoute(\'/album\')" class="fa fa-download fa-lg"> Download:</span>     <a mat-button *ngIf="hasRoute(\'/album\')"><span class="fa fa-file-excel-o fa-lg"></span> Spreadsheet</a>    <a mat-button (click)="downloadZip()" *ngIf="hasRoute(\'/album\')"><span class="fa fa-file-image-o fa-lg"></span> Images</a>    <a mat-button (click)="openLoginForm()"><span class="fa fa-sign-in fa-lg"></span> Login</a>  </mat-toolbar>    <!-- Jumbotron -->  <div class="container jumbotron"      fxLayout="row"      fxLayout.sm="column"       fxLayout.xs="column"       fxLayoutAlign.xs="start center"      fxLayoutAlign.sm="start center"       fxLayoutAlign.gt-sm="center center"       fxLayoutGap="10px">      <!-- Main header with website logo -->    <div fxFlex fxFlex.gt-sm="50%">      <h1>My Favorite Discs</h1>      <p>Everyone has an opinion, especially when it comes to music.  Your opinions about music are shaped by a lot of personal things that make you uniquely you.  This is the music you need to hear no matter who you are.</p>    </div>    <div fxFlex fxFlex.gt-sm="20%">      <img src="/assets/images/logo2.png" alt="Logo">    </div>    <div fxFlex></div>  </div></div>'
     var COMPONENTS = [{'name': 'AlbumComponent', 'selector': 'app-album'},{'name': 'AlbumdetailComponent', 'selector': 'app-albumdetail'},{'name': 'AlbumlistComponent', 'selector': 'app-albumlist'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContactComponent', 'selector': 'app-contact'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'SearchComponent', 'selector': 'app-search'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HeaderComponent'};

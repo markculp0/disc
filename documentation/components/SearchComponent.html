@@ -773,6 +773,7 @@ export class SearchComponent implements OnInit {
 &lt;div fxFlex fxFlexOffset&#x3D;&quot;20px&quot; class&#x3D;&quot;form-size&quot;&gt;
     &lt;h3&gt;Search for an Album&lt;/h3&gt;
     &lt;p&gt;{{discsearchForm.value | json}} {{discsearchForm.status}}&lt;/p&gt;
+    &lt;p *ngIf&#x3D;&quot;!discsearchForm.valid &amp;&amp; discsearchForm.dirty&quot;&gt;Invalid input.&lt;/p&gt;
 
     &lt;form novalidate [formGroup]&#x3D;&quot;discsearchForm&quot; #fform&#x3D;&quot;ngForm&quot; (ngSubmit)&#x3D;&quot;onSubmit()&quot; &gt;
         &lt;p&gt;
@@ -837,7 +838,7 @@ export class SearchComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div fxFlex fxFlexOffset="20px" class="form-size">    <h3>Search for an Album</h3>    <p>{{discsearchForm.value | json}} {{discsearchForm.status}}</p>    <form novalidate [formGroup]="discsearchForm" #fform="ngForm" (ngSubmit)="onSubmit()" >        <p>            <mat-form-field class="tenth-width">                <textarea matInput ngModel pattern="(((\d){1,2}){1})((\n)+(((\d){1,2}){1}))*(\n)*" formControlName="id" placeholder="IDs" type="textarea" rows=12></textarea>                <mat-error *ngIf="discsearchForm.get(\'id\').hasError(\'required\') && discsearchForm.get(\'id\').touched">ID is required</mat-error>            </mat-form-field>                    </p>        <button type="submit" mat-button class="background-primary text-floral-white" [disabled]="fform.form.invalid"> Submit</button>        <hr>    </form></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div fxFlex fxFlexOffset="20px" class="form-size">    <h3>Search for an Album</h3>    <p>{{discsearchForm.value | json}} {{discsearchForm.status}}</p>    <p *ngIf="!discsearchForm.valid && discsearchForm.dirty">Invalid input.</p>    <form novalidate [formGroup]="discsearchForm" #fform="ngForm" (ngSubmit)="onSubmit()" >        <p>            <mat-form-field class="tenth-width">                <textarea matInput ngModel pattern="(((\d){1,2}){1})((\n)+(((\d){1,2}){1}))*(\n)*" formControlName="id" placeholder="IDs" type="textarea" rows=12></textarea>                <mat-error *ngIf="discsearchForm.get(\'id\').hasError(\'required\') && discsearchForm.get(\'id\').touched">ID is required</mat-error>            </mat-form-field>                    </p>        <button type="submit" mat-button class="background-primary text-floral-white" [disabled]="fform.form.invalid"> Submit</button>        <hr>    </form></div></div>'
     var COMPONENTS = [{'name': 'AlbumComponent', 'selector': 'app-album'},{'name': 'AlbumdetailComponent', 'selector': 'app-albumdetail'},{'name': 'AlbumlistComponent', 'selector': 'app-albumlist'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContactComponent', 'selector': 'app-contact'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'SearchComponent', 'selector': 'app-search'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SearchComponent'};
