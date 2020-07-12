@@ -40,6 +40,8 @@ import { baseURL } from './shared/baseurl';
 import { AlbumlistComponent } from './albumlist/albumlist.component';
 import { LoginComponent } from './login/login.component';
 
+import { AuthGuard } from './guards/auth.guard';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -76,6 +78,7 @@ import { LoginComponent } from './login/login.component';
   ],
   providers: [
     DiscService,
+    AuthGuard,
     {provide: 'BaseURL', useValue: baseURL}
   ],
   entryComponents: [

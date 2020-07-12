@@ -9,23 +9,34 @@
 
 <p>{{ user | json}}</p>
 
-<form novalidate (ngSubmit)="onSubmit()" #LoginForm="ngForm">
+<p *ngIf="message" class="text-center error">{{message}}</p>
+
+<form novalidate (ngSubmit)="login()" [formGroup]="loginForm" #LoginForm="ngForm">
+
     <mat-dialog-content>
         <p>
             <mat-form-field>
-                <input matInput placeholder="Username" type="text" [(ngModel)]="user.username" name="username" #username="ngModel" required>
-                <mat-error *ngIf="username.errors?.required">Username is required</mat-error>
+                <!-- <input matInput placeholder="Username" type="text" class="form-control" formControlName="username" name="username" required> -->
+                <!-- <input matInput placeholder="Username" type="text" [(ngModel)]="model.username" name="username" #username="ngModel" required> -->
+                <input matInput type="text" class="form-control" formControlName="username">
+                <!-- <mat-error *ngIf="username.errors?.required">Username is required</mat-error> -->
+            
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="Password" type="password" [(ngModel)]="user.password" name="password" #password="ngModel" required>
-                <mat-error *ngIf="password.errors?.required">Password is required</mat-error>
+                <!-- <input matInput placeholder="Password" type="password" class="form-control" formControlName="password" name="password" required> -->
+                <!-- <input matInput placeholder="Password" type="password" [(ngModel)]="model.password" name="password" #password="ngModel" required> -->
+                <input matInput type="text" class="form-control" formControlName="password">
+                <!-- <mat-error *ngIf="password.errors?.required">Password is required</mat-error> -->
+            
             </mat-form-field>
-            <mat-checkbox [(ngModel)]="user.remember" name="remember">Remember Me</mat-checkbox>
+            <!-- <mat-checkbox [(ngModel)]="user.remember" name="remember">Remember Me</mat-checkbox> -->
         </p>
     </mat-dialog-content>
     <mat-dialog-actions>
         <span class="flex-spacer"></span>
         <button mat-button mat-dialog-close>Cancel</button>
+
         <button mat-button type="submit" class="background-primary text-floral-white" [disabled]="LoginForm.form.invalid">Login</button>
+    
     </mat-dialog-actions>
 </form>
