@@ -7,7 +7,7 @@
     </button>
 </mat-toolbar>
 
-<p>{{ user | json}}</p>
+<!-- <p>{{ user | json}}</p> -->
 
 <p *ngIf="message" class="text-center error">{{message}}</p>
 
@@ -15,17 +15,15 @@
 
     <mat-dialog-content>
         <p>
-            <mat-form-field>
-                <!-- <input matInput placeholder="Username" type="text" class="form-control" formControlName="username" name="username" required> -->
+            <mat-form-field>                
                 <!-- <input matInput placeholder="Username" type="text" [(ngModel)]="model.username" name="username" #username="ngModel" required> -->
-                <input matInput type="text" class="form-control" formControlName="username">
+                <input matInput type="text" placeholder="Username" type="text" class="form-control" formControlName="username" name="username">
                 <!-- <mat-error *ngIf="username.errors?.required">Username is required</mat-error> -->
             
             </mat-form-field>
-            <mat-form-field>
-                <!-- <input matInput placeholder="Password" type="password" class="form-control" formControlName="password" name="password" required> -->
+            <mat-form-field>                
                 <!-- <input matInput placeholder="Password" type="password" [(ngModel)]="model.password" name="password" #password="ngModel" required> -->
-                <input matInput type="text" class="form-control" formControlName="password">
+                <input matInput type="text" placeholder="Password" type="password" class="form-control" formControlName="password" name="password">
                 <!-- <mat-error *ngIf="password.errors?.required">Password is required</mat-error> -->
             
             </mat-form-field>
