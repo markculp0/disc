@@ -34,8 +34,9 @@ export class LoginComponent implements OnInit {
       username: ['', Validators.required],
       password: ['', Validators.required]
     });
-    this.returnUrl = '/home';
+    
     this.authService.logout();
+    this.returnUrl = '/home';
   }
 
   //** Login form controls: get function */

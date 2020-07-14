@@ -8,8 +8,9 @@ import { routes } from './routes';
   declarations: [],
   imports: [
     CommonModule,
-    RouterModule.forRoot(routes)
-  ],
+    RouterModule.forRoot(routes, {
+      onSameUrlNavigation: 'reload'
+    })],
   exports: [ RouterModule ]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { s}

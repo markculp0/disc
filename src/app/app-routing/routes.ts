@@ -9,7 +9,7 @@ import { ContactComponent } from '../contact/contact.component';
 import { AuthGuard } from '../guards/auth.guard';
 
 export const routes: Routes = [
-    { path: 'home',  component: HomeComponent },
+    { path: 'home',  component: HomeComponent},
     { path: 'album', component: AlbumComponent, canActivate: [AuthGuard] },
     { path: 'albumdetail/:id', component: AlbumdetailComponent, canActivate: [AuthGuard]},
     { path: 'albumlist', component: AlbumlistComponent, canActivate: [AuthGuard]},

@@ -8,6 +8,7 @@ import { Disc } from '../shared/disc';
 import { DiscService } from '../services/disc.service';
 
 import { LoginComponent } from '../login/login.component';
+import { AuthService } from '../services/auth.service';
 
 /**
  * Component to provide header for each page
@@ -25,6 +26,7 @@ export class HeaderComponent implements OnInit {
   curDiscs: Disc[];
   curIds: string[];
 
+
   /**
    * **Desc:** Constructor for Header Component.
    *
@@ -33,6 +35,7 @@ export class HeaderComponent implements OnInit {
    */
   constructor(public dialog: MatDialog,
               private router: Router,
+              private authService: AuthService,
               private discService: DiscService,
               @Inject('BaseURL') public BaseURL
     ) { }
@@ -43,6 +46,15 @@ export class HeaderComponent implements OnInit {
    * ***
    */
   ngOnInit() {
+  }
+
+  /**
+   * Logout method
+   */
+  logout() {
+    console.log('logout');
+    this.authService.logout();
+    this.router.navigate(['/home']);
   }
 
 
