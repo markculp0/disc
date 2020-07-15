@@ -15,8 +15,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  // model:User[] = USERS;
-  model: User = { username: 'user1', password: 'pass1'};
+   modelArr:User[] = USERS;
+   model: User;
+  // model: User = { username: 'user1', password: 'pass1'};
+
+  // modelArr.find(obj => obj.username == '');
 
   loginForm: FormGroup;  
   message: string;  
@@ -47,6 +50,12 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.invalid) {
       return;
     } else {
+
+      /** Get username-pass from model */
+      this.model = this.modelArr.find(obj => 
+        obj.username == this.f.username.value);
+      
+      /** Test if username-pass match */
       if(this.f.username.value == this.model.username && 
         this.f.password.value == this.model.password) {
           console.log("Successful login");

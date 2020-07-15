@@ -27,6 +27,8 @@ export class SearchComponent implements OnInit {
   curDisc: Disc;
   curDiscs: Disc[];
 
+  token: string;
+
   @ViewChild('fform', {static: false} ) feedbackFormDirective: any;
 
   constructor(private fb: FormBuilder,
@@ -55,9 +57,21 @@ export class SearchComponent implements OnInit {
     // Get disc IDs from form
     this.discIds = this.discsearchForm.value.id;
 
-    const fld = 'ids';
+    // Get token from session storage
+    this.token = sessionStorage.getItem('token');
+
+    // Create token object
+    const token_obj = {};
+    token_obj['id'] = this.token;
+
+    // Create array of object ids
     const obj = {};
-    obj[fld] = this.discIds.split('\n').map( id => ({id}));
+    obj['ids'] = this.discIds.split('\n').map( id => ({id}));
+
+    // Add token object to front of id object array
+    obj['ids'].unshift(token_obj);
+    
+    //  Stringify object
     const formData = JSON.stringify(obj);
 
     console.log(formData);
